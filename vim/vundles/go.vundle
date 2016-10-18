@@ -1,0 +1,2 @@
+Bundle 'gmarik/Vundle.vim'
+Bundle 'zhchang/quick_file'
