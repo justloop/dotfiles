@@ -18,11 +18,6 @@ function prompt_kylewest_precmd {
     git-info on
     git-info
   fi
-
-  # Get ruby information
-  if (( $+functions[ruby-info] )); then
-    ruby-info
-  fi
 }
 
 function prompt_kylewest_setup {
@@ -41,8 +36,6 @@ function prompt_kylewest_setup {
   zstyle ':prezto:module:editor:info:keymap:primary' format "%B%F{green}$>%f%b"
   zstyle ':prezto:module:editor:info:keymap:alternate' format "%B%F{magenta}<#%f%b"
 
-  # ruby info (rvm, rbenv)
-  zstyle ':prezto:module:ruby:info:version' format '[ %v ]'
 
   # vcs
   zstyle ':prezto:module:git:info:branch' format '%F{yellow}%b%f'
@@ -51,7 +44,6 @@ function prompt_kylewest_setup {
 
   # prompts
   PROMPT='%F{cyan}%c%f ${git_info[prompt]}${editor_info[keymap]} '
-  RPROMPT='%F{blue}${ruby_info[version]}'
 }
 
 prompt_kylewest_setup "$@"
